@@ -1,0 +1,21 @@
+<h2 class="text-center m-5">Cakes!</h2>
+
+<div class="text-center" *ngIf="cakesLoading">
+    Loading the cakes...
+</div>
+
+<div *ngFor="let cake of cakes$ | async" class="cake-card container-sm">
+    <a [routerLink]="[cake._id]">
+        <img
+            [src]="cake.image"
+            onerror="this.src='/assets/no-cake.jpeg'"
+            alt="{{ cake.name }}"
+            class="cake-image" />
+    </a>
+    <div class="cake-details">
+        <h3 class="cake-name">
+            <a [routerLink]="[cake._id]">{{ cake.name }}</a>
+        </h3>
+        <p>{{ cake.shortDescription }}</p>
+    </div>
+</div>
