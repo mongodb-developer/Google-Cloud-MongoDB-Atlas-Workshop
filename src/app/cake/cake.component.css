@@ -1,0 +1,41 @@
+.cake {
+    margin: 20px 0;
+}
+
+.cake-name {
+    margin-bottom: 30px;
+}
+
+.cake-details {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.description {
+    margin-top: 20px;
+}
+
+.cake-image {
+    width: 350px;
+    max-height: 500px;
+}
+
+.add-comment {
+    margin: 50px 0;
+}
+
+.cake,
+.comments,
+.add-comment {
+    /* // background-color: #f6f6f5; */
+    padding: 30px 50px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0.25rem;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

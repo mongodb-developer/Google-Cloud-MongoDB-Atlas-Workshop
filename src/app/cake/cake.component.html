@@ -1,0 +1,43 @@
+<div *ngIf="cakeLoading; else cakeBlock">
+    Loading the cake...
+</div>
+
+<ng-template #cakeBlock>
+    <div class="cake container-sm">
+
+        <div class="cake-details">
+            <img class="cake-image" [src]="cake.image" onerror="this.src='/assets/no-cake.jpeg'" />
+            <div>
+                <h2 class="cake-name">{{ cake.name }}</h2>
+                <p class="description">{{ cake.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <h4>Comments</h4>
+        <hr>
+
+        <div *ngFor="let comment of comments" class="comment">
+            <span>Author: {{ comment.name }}</span>
+            <span>Date: {{ comment.date | date }}</span>
+            <p>{{ comment.text }}</p>
+            <hr>
+        </div>
+
+        <!-- <ng-template #loadComments>
+            <button *ngIf="comments.length" class="btn btn-primary" (click)="loadMoreComments()">Load more comments</button>
+        </ng-template> -->
+
+        <!-- <div *ngIf="commentsLoading; else loadComments">Loading comments...</div> -->
+
+        <span *ngIf="!comments.length && !commentsLoading">
+            No comments yet.
+        </span>
+    </div>
+
+    <div class="add-comment">
+        <h4>Add a comment</h4>
+        <app-comment-form (formSubmitted)="addComment($event)"></app-comment-form>
+    </div>
+</ng-template>
