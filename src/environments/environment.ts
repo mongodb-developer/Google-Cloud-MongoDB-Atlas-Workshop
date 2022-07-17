@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APP_ID: 'commentsentiment-kcdnk',
+  GRAPHQL_URI: 'https://realm.mongodb.com/api/client/v2.0/app/commentsentiment-kcdnk/graphql',
+  API_KEY: 'DsDuF0B6lNqP9vj5nHWMibVpOyjvCz2FRRCjwP0jist8q2NUeTrgQZhSq9SCF9E0',
 };
 
 /*
