@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  APP_ID: 'commentsentiment-kcdnk',
-  GRAPHQL_URI: 'https://realm.mongodb.com/api/client/v2.0/app/commentsentiment-kcdnk/graphql',
-  API_KEY: 'DsDuF0B6lNqP9vj5nHWMibVpOyjvCz2FRRCjwP0jist8q2NUeTrgQZhSq9SCF9E0',
+  APP_ID: '',
+  GRAPHQL_URI: '',
+  API_KEY: '',
 };
 
 /*
