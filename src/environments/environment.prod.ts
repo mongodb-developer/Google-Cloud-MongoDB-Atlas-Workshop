@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  APP_ID: '',
+  GRAPHQL_URI: '',
+  API_KEY: ''
 };
