@@ -14,7 +14,7 @@ const GET_CAKE_WITH_COMMENTS = gql`
       ingredients
     }
     
-    comments(query: { cakeId: { _id: $cakeId } }, limit: 15, sortBy: DATE_ASC) {
+     comments(query: { _id: $cakeId }, limit: 15, sortBy: DATE_ASC) {
       name,
       date,
       text
