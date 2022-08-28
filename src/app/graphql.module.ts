@@ -26,11 +26,20 @@ async function getValidAccessToken() {
 }
 
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
+    if (!GRAPHQL_URI) {
+      throw new Error('Missing environment variable: GRAPHQL_URI');
+    }
+
     const http = httpLink.create({ uri: GRAPHQL_URI });
 
     // Create a new ApolloLink that appends the access token to the headers of each GraphQL request.
     const auth = setContext(async () => {
-      const token = await getValidAccessToken();
+      let token;
+      try {
+        token = await getValidAccessToken();
+      } catch (e) {
+        throw new Error(`No valid access token found. ${e}`);
+      }
     
       return {
         headers: {
