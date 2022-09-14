@@ -1,6 +1,6 @@
 # Bakery
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+Demo application for the [MongoDB Atlas on Google Cloud workshop](https://mongodb-developer.github.io/google-cloud-workshop/).
 
 ## Development server
 
@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Disclaimer
+
+Use at your own risk; not a supported MongoDB product
