@@ -9,6 +9,7 @@
 .cake-details {
     display: flex;
     flex-direction: row;
+    flex-direction: row1;
     gap: 30px;
 }
 
@@ -19,6 +20,7 @@
 .cake-image {
     width: 350px;
     max-height: 500px;
+    max-width: 100px;
 }
 
 .add-comment {
